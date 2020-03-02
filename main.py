@@ -23,18 +23,13 @@ class Quiz():
         f = open(filename, 'r')
         quiz = f.read()
         for line in quiz:
-            tmp_ques=[]
-            tmp.line.split('*')
-        tmp = []
-        tmp_ques = tmp[0]
-        answers = tmp[1].split('')
-        answers = []
-        right_ans = answers[len(answers)-1]
-        answers.pop()
-        ques=Quiestion(tmp_ques,answers,right_ans)
-        self.questions.append(ques)
-
-
+            tmp = line.split('*')
+            tmp_ques = tmp[0]
+            answers = tmp[1].split('')
+            right_ans = answers[len(answers)-1]
+            answers.pop()
+            ques=Quiestion(tmp_ques,answers,right_ans)
+            self.questions.append(ques)
 
         f.close()
 
